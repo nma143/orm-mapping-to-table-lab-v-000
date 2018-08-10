@@ -42,7 +42,8 @@ class Student
 
   def create (student_hash)
     new_student = Student.new(student_hash)
-
+    save
+    new_student
   end
 
 end
