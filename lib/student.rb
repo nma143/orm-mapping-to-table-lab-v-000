@@ -40,8 +40,8 @@ class Student
 
   end
 
-  def create (student_hash)
-    new_student = Student.new(student_hash)
+  def create (:name, :grade)
+    new_student = Student.new(:name, :grade)
     save
     new_student
   end
