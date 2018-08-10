@@ -6,7 +6,7 @@ class Student
   attr_accessor :name, :grade
   attr_reader :id
 
-  def initialize (name, grade, id = nil)
+  def initialize (:name, :grade, :id = nil)
     @name = name
     @grade = grade
     @id = id
@@ -41,8 +41,8 @@ class Student
   end
 
   def create (student_hash)
-    new_student = Student.new(student_hash[:name], student_hash[:grade])
-    
-  end  
+    new_student = Student.new(student_hash)
+
+  end
 
 end
