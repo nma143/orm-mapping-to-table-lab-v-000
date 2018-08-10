@@ -6,7 +6,7 @@ class Student
   attr_accessor :name, :grade
   attr_reader :id
 
-  def initialize (:name, :grade, :id = nil)
+  def initialize (name:, grade:, id: nil)
     @name = name
     @grade = grade
     @id = id
@@ -40,8 +40,8 @@ class Student
 
   end
 
-  def create (:name, :grade)
-    new_student = Student.new(:name, :grade)
+  def create (name:, grade:)
+    new_student = Student.new(name, grade)
     save
     new_student
   end
